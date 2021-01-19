@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input{
+  padding: 0.6rem 2rem;
+}
+
+#DB{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+
+}
+span{
+  padding: 1rem;
+  font-weight: bolder;
+}
