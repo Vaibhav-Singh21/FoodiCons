@@ -3,17 +3,16 @@
   text-align: center;
 }
 
-input{
+input {
   padding: 0.6rem 2rem;
 }
 
-#DB{
-  display: flex;
-  justify-content:center;
-  align-items: center;
-
-}
-span{
+span {
   padding: 1rem;
-  font-weight: bolder;
+  font-size: larger;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  cursor: pointer;
+  justify-content: space-evenly;
+  line-height: 200%;
 }

@@ -29,27 +29,35 @@ export default function App() {
 
   var [meaning, setMeaning] = useState("");
 
-  emoji = (event) => {
+  function emoji(event) {
     var userInput = event.target.value;
     var meaning = foodEmot[userInput];
     if (userInput in foodEmot) {
       return setMeaning(meaning);
     }
     return setMeaning("Not in DB");
-  };
+  }
+
+  function emojiHandler(key) {
+    var meaning = foodEmot[key];
+    setMeaning(meaning);
+  }
   return (
     <div className="App">
-      <h1>Understand The Emoticons</h1>
+      <h1>
+        Feel the <em>FoodIcons</em>
+      </h1>
       <input onChange={emoji} />
       <h2> {meaning} </h2>
+      <h3>Emoji in DB:</h3>
       <div id="DB">
-        <span>Emoji in DB:</span>
-        {
-          //in this way loop over the Objects
-          Object.entries(foodEmot).map(([key, value]) => {
-            return key;
-          })
-        }
+        {Object.entries(foodEmot).map(([key, value]) => {
+          return (
+            <span key={key} onClick={() => emojiHandler(key)}>
+              {key}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
