@@ -47,7 +47,7 @@ export default function App() {
       <h1>
         Feel the <em>FoodIcons</em>
       </h1>
-      <input onChange={emoji} />
+      <input onChange={emoji} placeholder="type your emoticon here" />
       <h2> {meaning} </h2>
       <h3>Emoji in DB:</h3>
       <div id="DB">
@@ -59,6 +59,7 @@ export default function App() {
           );
         })}
       </div>
+      <h4>Or you can click the above foodicons😃🙏🏼</h4>
     </div>
   );
 }
